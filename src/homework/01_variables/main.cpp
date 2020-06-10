@@ -18,7 +18,7 @@ int main()
 
 	cout<<"Enter tip percentage rate: ";
 	cin>>tip_rate; 
-	
+	cout<<"\n\n"; 
 
 	tip_amount = get_tip_amount(meal_amount, tip_rate);
 	total = meal_amount + tax_amount + tip_amount; 
@@ -27,7 +27,7 @@ int main()
 	cout<<"Sales Tax: "<<"$"<<tax_amount<<"\n"; 
 	cout<<"Tip Amount: "<<"$"<<tip_amount<<"\n"; 
 	cout<<"Total: "<<"$"<<total<<"\n"; 
-
+	cout<<"Thank You and GoodBye\n\n";
 	
 
 	return 0;
