@@ -38,6 +38,7 @@ int main()
 		cin >> credit_hours;
 		cout << "(Enter any key to continue or -1 to quit and get GPA) \n";
 		cin >> user_reply; 
+		cout << "\n";
 		sum_credit_points += get_grade_points(letter_grade) * credit_hours;
 		sum_credit_hours += credit_hours; 
 	}while(user_reply != "-1");
