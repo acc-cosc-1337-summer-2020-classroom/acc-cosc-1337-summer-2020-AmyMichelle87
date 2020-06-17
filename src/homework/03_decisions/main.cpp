@@ -1,5 +1,7 @@
 #include<iostream>
 #include<string>
+#include<iomanip>
+
 using std::cout; using std::cin; using std::string;
 //write include statements
 #include "decisions.h"
@@ -28,31 +30,21 @@ int main()
 {
 	string letter_grade;
 	int credit_hours, sum_credit_hours = 0, sum_credit_points = 0;
+	string user_reply; 
+	do{
+		cout << "Enter letter grade:  ";
+		cin >> letter_grade;
+		cout << "Enter credit hours: ";
+		cin >> credit_hours;
+		cout << "(Enter any key to continue or -1 to quit and get GPA) \n";
+		cin >> user_reply; 
+		sum_credit_points += get_grade_points(letter_grade) * credit_hours;
+		sum_credit_hours += credit_hours; 
+	}while(user_reply != "-1");
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade) * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-
+	
 	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
-	cout << "GPA: " << gpa;
+	cout << std::fixed<<std::setprecision(3) << "GPA: " << gpa << "\n";
 
 	return 0;
 }
