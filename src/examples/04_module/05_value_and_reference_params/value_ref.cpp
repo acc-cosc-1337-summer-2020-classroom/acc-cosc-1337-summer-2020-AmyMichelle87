@@ -1,4 +1,7 @@
 #include "value_ref.h"
+void param_val_ref(int num1, int num2){
+    
+}
 
 /*
 Write function code for pass_by_val_and_ref with
