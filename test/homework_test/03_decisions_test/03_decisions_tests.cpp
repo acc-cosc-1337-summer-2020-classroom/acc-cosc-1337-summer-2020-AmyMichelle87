@@ -15,7 +15,7 @@ TEST_CASE("Test letter grade function"){
 }
 
 //Test cases for calculate_gpa function 
-TEST_CASE("calculate_gpa function"){
+TEST_CASE("Test calculate_gpa function"){
 	REQUIRE(calculate_gpa(12, 45) == 3.75);
 	REQUIRE(calculate_gpa(120, 390) == 3.25);
 	REQUIRE(calculate_gpa(90, 180) == 2.00);
