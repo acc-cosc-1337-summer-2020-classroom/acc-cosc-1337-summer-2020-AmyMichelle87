@@ -29,7 +29,15 @@ while(dna[i] != '\0'){
 Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
+string get_reverse_string(string dna){
+    string reversed = "";
 
+    for(int i = dna.length()-1; i >=0; i--){
+        reversed += dna[i];
+    }
+    return reversed; 
+
+}
 
 
 /*
@@ -43,3 +51,25 @@ c. return string
 
 */
 
+string get_dna_complement(string dna){
+
+    string dna_complement = "";
+    string get_reverse = get_reverse_string(dna); 
+
+    for(int i = 0; i < get_reverse.length(); i++){
+        if(get_reverse[i] == 'A'){
+            dna_complement += 'T';
+        }
+        if(get_reverse[i] == 'T'){
+            dna_complement += 'A'; 
+        }
+        if(get_reverse[i] == 'C'){
+            dna_complement += 'G'; 
+        }
+        if(get_reverse[i] == 'G') {
+            dna_complement += 'C'; 
+        }
+    }
+    return dna_complement; 
+
+}
