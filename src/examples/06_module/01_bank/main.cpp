@@ -6,24 +6,20 @@ using std::string; using std::cout; using std::cin;
 int main()
 {	
 
+	BankAccount account = get_account(1);
+	
+	int choice; 
 
-	BankAccount account(1000);  //create an instance/variable of class in stack memory. i.e. account.               
+	do{
+		display_menu();
+		choice = get_choice(); 
 
-	int balance = account.get_balance();
-	cout << "Balance: "<< balance<<"\n"; 
+		handle_transaction(account, choice);
+	}while(choice != 4); 
 
-	int deposit; 
-	cout << "Enter deposit amount: "; 
-	cin >> deposit; 
-	account.deposit(deposit);
-	cout << "Balance: "<< account.get_balance()<<"\n"; 
+	
 
-	int withdraw; 
-	cout << "Enter withdraw amount: "; 
-	cin >> withdraw; 
-	account.withdraw(withdraw);
 
-	cout << "Balance: "<<account.get_balance()<<"\n"; 
 
 	return 0;
 }
