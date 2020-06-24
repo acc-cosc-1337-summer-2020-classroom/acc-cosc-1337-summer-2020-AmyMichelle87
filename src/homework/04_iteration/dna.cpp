@@ -6,7 +6,22 @@ Calculate GC content:
 Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
+double get_gc_content(const string &dna){
 
+double dna_content = 0.0; 
+int string_length = 0; 
+int i = 0; 
+
+while(dna[i] != '\0'){
+    if(dna[i] == 'G' || dna[i] == 'C' ){
+        dna_content += 1; 
+        
+    }
+    i += 1; 
+    string_length += 1; 
+}
+    return dna_content /string_length;
+}
 
 
 
