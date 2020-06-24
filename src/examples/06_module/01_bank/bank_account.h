@@ -1,12 +1,18 @@
 //bank_account.h
-#include <vector> 
 #include<iostream>
+#include<vector>
 
-enum transaction{DEPOSIT=1, WITHDRAW=2,  DISPLAY=3};
+#ifndef BANK_ACCOUNT_H//header guards
+#define BANK_ACCOUNT_H
 
-class BankAccount{
-    public: 
-         BankAccount() : BankAccount(0){}//delegating constructor
+enum transaction{ DEPOSIT=1, WITHDRAW=2, DISPLAY=3};
+enum class OPTION{DEPOSIT=1, WITHDRAW=2, DISPLAY=3, EXIT=4};//c++11 
+
+class BankAccount
+{
+
+public:
+    BankAccount() : BankAccount(0){}//delegating constructor
     BankAccount(int b) : balance{b} { bank_balance += balance; } //initializer list
     int get_balance() const {return balance;}//inline class function
     void deposit(int amount);
@@ -16,6 +22,7 @@ private:
     int balance;//lock this variable
     static int bank_balance;
 };
+
 BankAccount& get_account(int i);  //free function {
 
 void display_menu();
@@ -23,3 +30,5 @@ void display_menu();
 void handle_transaction(BankAccount& account, int choice);
 
 int get_choice();
+
+#endif
