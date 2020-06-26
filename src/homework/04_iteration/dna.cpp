@@ -6,7 +6,7 @@ Calculate GC content:
 Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
-double get_gc_content(const string &dna){
+double get_gc_content(const string& dna){
 
 double dna_content = 0.0; 
 int string_length = 0; 
@@ -56,7 +56,7 @@ string get_dna_complement(string dna){
     string dna_complement = "";
     string get_reverse = get_reverse_string(dna); 
 
-    for(int i = 0; i < get_reverse.length(); i++){
+    for(std::size_t i = 0; i < get_reverse.length(); i++){
         if(get_reverse[i] == 'A'){
             dna_complement += 'T';
         }

@@ -50,7 +50,7 @@ int main()
 		if(choice2 == "y" || choice2 == "Y"){
 			cout<<"\n"<<std::endl; 
 		}else {
-			cout<<"Goodbye!";
+			cout<<"Goodbye!\n";
 			break;
 		}
 	}
