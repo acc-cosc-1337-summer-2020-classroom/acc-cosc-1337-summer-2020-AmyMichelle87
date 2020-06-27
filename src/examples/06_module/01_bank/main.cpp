@@ -7,16 +7,17 @@ using std::string; using std::cout; using std::cin;
 int main()
 {	
 
-	//ATM atm;
-	//atm.run();
+	ATM atm;
+	atm.run();
 
-	BankAccount account; 
+
+
+	/*BankAccount account; 
 	BranchBank bank(10000); 
 	bank.update_balance(500); 
-
-
+	cout<<account; 
 	cout<<account.get_bank_balance()<<"\n";
-	cout<<bank.get_branch_balance()<<"\n"; 
+	cout<<bank.get_branch_balance()<<"\n"; */
 
 
 	return 0;
