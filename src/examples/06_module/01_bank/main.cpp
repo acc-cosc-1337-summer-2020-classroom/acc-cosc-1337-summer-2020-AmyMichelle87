@@ -17,10 +17,13 @@ int main()
 	cout<<c;
 	CheckingAccount c1;
 	cout<<c1; 
-	SavingsAccount s(100);   //will be zero for both because its the default constructor sets balance to zero. 
-	SavingsAccount s1; 
-	cout<<s1;
+	SavingsAccount s(100);  
 	cout<<s; 
+	cout<<s.get_balance()<<"\n";  //will be zero for both because its the default constructor sets balance to zero. 
+	SavingsAccount s1; 
+	cout<<s1; //base class balance 
+
+	
 	
 
 
