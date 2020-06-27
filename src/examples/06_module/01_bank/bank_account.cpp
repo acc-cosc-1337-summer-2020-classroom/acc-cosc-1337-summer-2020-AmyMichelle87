@@ -1,6 +1,6 @@
 #include "bank_account.h"
 
-using std::vector; 
+
 using std::cout; 
 using std::cin; 
 //bank_account.cpp
@@ -22,4 +22,10 @@ void BankAccount::withdraw(int amount){
 }
 
 int BankAccount::bank_balance = 0; 
+
+void BranchBank::update_balance(int b){
+
+    branch_balance += b; 
+    BankAccount::bank_balance += b; 
+}
 
