@@ -2,13 +2,26 @@
 #include<iostream>
 #include<string>
 #include "atm.h"
+#include "checking_account.h"
+#include "savings_account.h"
 
 using std::string; using std::cout; using std::cin; 
 int main()
 {	
 
-	ATM atm;
-	atm.run();
+	//ATM atm;
+	//atm.run();
+	
+
+	CheckingAccount c(1000); 
+	cout<<c;
+	CheckingAccount c1;
+	cout<<c1; 
+	SavingsAccount s(100);   //will be zero for both because its the default constructor sets balance to zero. 
+	SavingsAccount s1; 
+	cout<<s1;
+	cout<<s; 
+	
 
 
 
