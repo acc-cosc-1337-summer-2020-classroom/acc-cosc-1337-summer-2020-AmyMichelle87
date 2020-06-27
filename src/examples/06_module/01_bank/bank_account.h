@@ -23,12 +23,5 @@ private:
     static int bank_balance;
 };
 
-BankAccount& get_account(int i);  //free function {
-
-void display_menu();
-
-void handle_transaction(BankAccount& account, int choice);
-
-int get_choice();
 
 #endif

@@ -7,12 +7,21 @@ using std::string; using std::cout; using std::cin;
 int main()
 {	
 
-	BankAccount account = get_account(1);   //using this to get a bank account from the function. 
-	
+	BankAccount account(100);   //using this to get a bank account from the function. 
+	cout<<"Accout: "<<account.get_balance()<<"\n";
 
-	ATM atm(account);
-	atm.run();
+	//ATM atm(account);
+	//atm.run();
 	
+	BankAccount account1 = account;
+	cout<<"Account1: "<<account1.get_balance()<<"\n";
+
+	account.deposit(50);
+	cout<<"Account: "<<account.get_balance()<<"\n";
+
+	cout<<"Account1: "<<account1.get_balance()<<"\n";
+
+
 	
 
 
