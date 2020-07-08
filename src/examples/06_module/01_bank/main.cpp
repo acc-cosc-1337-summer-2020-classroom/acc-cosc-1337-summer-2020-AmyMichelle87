@@ -5,11 +5,18 @@
 #include "checking_account.h"
 #include "savings_account.h"
 #include <memory>
+
 using std::string; using std::cout; using std::cin; using std::unique_ptr; using std::make_unique; 
 int main()
 {	
 	unique_ptr<BankAccount> a = make_unique<SavingsAccount>(600);  //heap--- making get_balance a virtual function will make this work properly. 
-	cout<<a->get_balance();
+	cout<<a->get_balance()<<"\n";
+	unique_ptr<BankAccount> c = make_unique<CheckingAccount>(100);
+	cout<<c->get_balance()<<"\n";
+
+
+
+
 	
 	/*unique_ptr<BankAccount> a = make_unique<BankAccount>(600);  //heap 
 	display_account_val(std::move(a)); //when your using a val not referencing the address of the object.  
