@@ -11,7 +11,7 @@ void BankAccount::deposit(int amount){
     
     if(amount > 0){
         balance += amount; 
-        bank_balance += amount; 
+        bank_balance += amount;      
     }
 }
 void BankAccount::withdraw(int amount){

@@ -4,6 +4,7 @@
 #define ATM_H
 #include<iostream> 
 #include<vector>
+#include <memory> 
 using std::vector; 
 
 class ATM
@@ -22,4 +23,8 @@ class ATM
         vector<BankAccount> accounts{BankAccount(100), BankAccount(200), BankAccount(300)};
 };
 
-#endif 
+#endif    
+
+void display_account(std::unique_ptr<BankAccount>& account);//By reference 
+void display_account_val(std::unique_ptr<BankAccount> account); //By Value / copy of unique pointer is created. 
+std::unique_ptr<BankAccount> get_account(); 

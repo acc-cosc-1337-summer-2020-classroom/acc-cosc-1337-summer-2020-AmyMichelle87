@@ -28,7 +28,7 @@ class BranchBank{
 enum transaction{ DEPOSIT=1, WITHDRAW=2, DISPLAY=3};
 enum class OPTION{DEPOSIT=1, WITHDRAW=2, DISPLAY=3, EXIT=4};//c++11 
 
-class BankAccount
+class BankAccount     
 {
 
 public:

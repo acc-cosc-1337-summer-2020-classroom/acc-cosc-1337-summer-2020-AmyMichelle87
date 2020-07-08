@@ -4,16 +4,22 @@
 #include "atm.h"
 #include "checking_account.h"
 #include "savings_account.h"
-
-using std::string; using std::cout; using std::cin; 
+#include <memory>
+using std::string; using std::cout; using std::cin; using std::unique_ptr; using std::make_unique; 
 int main()
 {	
+
+	BankAccount a1(500);  //stack 
+	unique_ptr<BankAccount> a = make_unique<BankAccount>(600);  //heap 
+	display_account_val(std::move(a)); //when your using a val not referencing the address of the object.  
+	unique_ptr<BankAccount> a2 = get_account();  //using the example returning a pointer. 
+	display_account(a2);
 
 	//ATM atm;
 	//atm.run();
 	
 
-	CheckingAccount c(1000); 
+	/*CheckingAccount c(1000); 
 	cout<<c;
 	CheckingAccount c1;
 	cout<<c1; 
@@ -21,7 +27,7 @@ int main()
 	cout<<s; 
 	cout<<s.get_balance()<<"\n";  //will be zero for both because its the default constructor sets balance to zero. 
 	SavingsAccount s1; 
-	cout<<s1; //base class balance 
+	cout<<s1; //base class balance */
 
 	
 	

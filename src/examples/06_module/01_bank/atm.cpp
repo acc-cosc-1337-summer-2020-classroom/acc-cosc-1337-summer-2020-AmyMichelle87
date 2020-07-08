@@ -16,7 +16,7 @@ void ATM::run()
             {
                 display_menu();
                 set_choice();
-
+    
                 handle_transaction();
             } while (choice != 4);
     }while(true);
@@ -65,4 +65,18 @@ void ATM::handle_transaction()
         break;
     }
 
+}
+
+void display_account(std::unique_ptr<BankAccount>& account){
+   cout<<*account<<"\n";   //we can do this because we overrided the cout<<account to display the balance. 
+}
+
+void display_account_val(std::unique_ptr<BankAccount> account){
+    cout<<*account<<"\n";
+}
+
+std::unique_ptr<BankAccount> get_account(){   //this returns a unique pointer 
+    std::unique_ptr<BankAccount> a = std::make_unique<BankAccount>(1000); 
+
+    return a; 
 }
