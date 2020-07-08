@@ -8,12 +8,13 @@
 using std::string; using std::cout; using std::cin; using std::unique_ptr; using std::make_unique; 
 int main()
 {	
-
-	BankAccount a1(500);  //stack 
-	unique_ptr<BankAccount> a = make_unique<BankAccount>(600);  //heap 
+	unique_ptr<BankAccount> a = make_unique<SavingsAccount>(600);  //heap--- making get_balance a virtual function will make this work properly. 
+	cout<<a->get_balance();
+	
+	/*unique_ptr<BankAccount> a = make_unique<BankAccount>(600);  //heap 
 	display_account_val(std::move(a)); //when your using a val not referencing the address of the object.  
 	unique_ptr<BankAccount> a2 = get_account();  //using the example returning a pointer. 
-	display_account(a2);
+	display_account(a2);*/
 
 	//ATM atm;
 	//atm.run();
