@@ -83,3 +83,8 @@ std::unique_ptr<BankAccount> get_account(){   //this returns a unique pointer
 
     return a; 
 }
+
+void use_account(){
+    std::unique_ptr<BankAccount> a = std::make_unique<BankAccount>(1000);
+    cout<<*a; 
+}

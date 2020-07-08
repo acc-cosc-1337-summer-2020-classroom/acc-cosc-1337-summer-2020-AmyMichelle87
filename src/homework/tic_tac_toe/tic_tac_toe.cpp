@@ -1,5 +1,8 @@
 //cpp
 #include "tic_tac_toe.h"
+#include<iostream> 
+
+using std::cout; 
 
 bool TicTacToe::game_over(){
 
@@ -50,3 +53,57 @@ void TicTacToe::display_board()const{
             std::cout<<pegs[i]<<"|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"\n";
         }
      }
+
+bool TicTacToe::check_column_win(){
+    
+         bool win; 
+         if(pegs[1] == player && pegs[4] == player && pegs[7] == player){
+             win = true; 
+         }
+         else if(pegs[2] == player && pegs[5] == player && pegs[8] == player){
+             win = true; 
+         }else if(pegs[3] == player && pegs[6] == player && pegs[9] == player){
+             win = true;
+         }else {
+             win = false; 
+         }
+     
+         return win; 
+     }
+
+bool TicTacToe::check_row_win(){
+
+        bool win; 
+        if(pegs[0] == player && pegs[1] == player && pegs[2] == player){
+            win = true; 
+        }else if(pegs[3] == player && pegs[4] == player && pegs[5] == player){
+            win = true; 
+        }else if(pegs[6] == player && pegs[7] == player && pegs[8] == player){
+            win = true; 
+        }else {
+            win = false; 
+        }
+
+        return win; 
+    }
+bool TicTacToe::check_diagonal_win(){
+
+    bool win; 
+    if(pegs[1] == player && pegs[5] == player && pegs[9] == player){
+        win = true; 
+    }else if(pegs[7] == player && pegs[5] == player && pegs[3] == player){
+        win = true; 
+    }else {
+        win = false; 
+    }
+   
+    return win; 
+}
+
+void TicTacToe::set_winner(){
+    if(player == "X"){
+        winner = "O";
+    }else {
+        winner = "X";
+    }
+}
