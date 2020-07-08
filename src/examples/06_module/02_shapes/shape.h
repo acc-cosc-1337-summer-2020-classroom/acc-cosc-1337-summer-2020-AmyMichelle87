@@ -8,8 +8,7 @@ class Shape {
     public: 
         virtual void draw() = 0;  //setting it to zero makes it a pure virtual function 
                                   //And out Shape class is an abstract class. 
-        
-    
+
 };
 
 #endif
