@@ -5,6 +5,8 @@
 #include<iostream> 
 #include<vector>
 #include <memory> 
+#include"checking_account.h"
+#include"savings_account.h"
 using std::vector; 
 
 class ATM
@@ -20,7 +22,7 @@ class ATM
         void handle_transaction();
         int choice; 
         int selected_account_index; 
-        vector<BankAccount> accounts{BankAccount(100), BankAccount(200), BankAccount(300)};
+        vector<BankAccount> accounts{CheckingAccount(100), BankAccount(200)};
 };
 
 #endif    

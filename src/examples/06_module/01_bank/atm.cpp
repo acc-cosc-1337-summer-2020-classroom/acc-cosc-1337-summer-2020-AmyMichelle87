@@ -4,7 +4,9 @@
 using std::cout;    using std::cin;
 void ATM::scan_card(){
     cout<<"Welcome to the bank\n";
-    cout<<"Scan Card: \n"; 
+    cout<<"Select Account: \n"; 
+    cout<<"1-Checking \n";
+    cout<<"2-Savings \n";
     cin>>selected_account_index;
 }
 
@@ -46,19 +48,20 @@ void ATM::set_choice()
 
 void ATM::handle_transaction()
 {
-    accounts[selected_account_index].set_option(static_cast<OPTION>(choice));
+    BankAccount account = accounts[selected_account_index-1];
+     account.set_option(static_cast<OPTION>(choice));
  
 
     switch (static_cast<OPTION>(choice))
     {
     case OPTION::DEPOSIT:
-        cin>>accounts[selected_account_index];
+        cin>>account;
         break;
     case OPTION::WITHDRAW:
-        cin>>accounts[selected_account_index];
+        cin>>account;
         break;
     case OPTION::DISPLAY:
-        cout<<accounts[selected_account_index];
+        cout<<account;
         break;
     default:
         cout<<"Exiting...";

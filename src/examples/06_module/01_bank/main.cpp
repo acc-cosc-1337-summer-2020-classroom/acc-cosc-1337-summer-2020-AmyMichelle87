@@ -9,10 +9,10 @@
 using std::string; using std::cout; using std::cin; using std::unique_ptr; using std::make_unique; 
 int main()
 {	
-	unique_ptr<BankAccount> a = make_unique<SavingsAccount>(600);  //heap--- making get_balance a virtual function will make this work properly. 
+	/*unique_ptr<BankAccount> a = make_unique<SavingsAccount>(600);  //heap--- making get_balance a virtual function will make this work properly. 
 	cout<<a->get_balance()<<"\n";
 	unique_ptr<BankAccount> c = make_unique<CheckingAccount>(100);
-	cout<<c->get_balance()<<"\n";
+	cout<<c->get_balance()<<"\n";*/
 
 
 
@@ -23,8 +23,8 @@ int main()
 	unique_ptr<BankAccount> a2 = get_account();  //using the example returning a pointer. 
 	display_account(a2);*/
 
-	//ATM atm;
-	//atm.run();
+	ATM atm;
+	atm.run();
 	
 
 	/*CheckingAccount c(1000); 
