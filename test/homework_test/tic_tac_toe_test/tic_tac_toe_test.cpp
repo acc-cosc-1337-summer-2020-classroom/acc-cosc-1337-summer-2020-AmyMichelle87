@@ -52,4 +52,82 @@ TEST_CASE("Verify win by first column"){
 	ticTacToe.mark_board(7);
 	REQUIRE(ticTacToe.game_over() == true);
 }
+TEST_CASE("Verify win by second column"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
 
+	ticTacToe.mark_board(2);
+	ticTacToe.mark_board(3);
+	ticTacToe.mark_board(5);
+	ticTacToe.mark_board(7);
+	ticTacToe.mark_board(8);
+	REQUIRE(ticTacToe.game_over() == true);
+}
+TEST_CASE("Verify win by third column"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(3);
+	ticTacToe.mark_board(2);
+	ticTacToe.mark_board(6);
+	ticTacToe.mark_board(7);
+	ticTacToe.mark_board(9);
+	REQUIRE(ticTacToe.game_over() == true);
+}
+TEST_CASE("Verify win by first row"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(1);
+	ticTacToe.mark_board(5);
+	ticTacToe.mark_board(2);
+	ticTacToe.mark_board(7);
+	ticTacToe.mark_board(3);
+	REQUIRE(ticTacToe.game_over() == true);
+}
+TEST_CASE("Verify win by second row"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(4);
+	ticTacToe.mark_board(1);
+	ticTacToe.mark_board(5);
+	ticTacToe.mark_board(7);
+	ticTacToe.mark_board(6);
+	REQUIRE(ticTacToe.game_over() == true);
+}
+TEST_CASE("Verify win by third row"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(7);
+	ticTacToe.mark_board(5);
+	ticTacToe.mark_board(8);
+	ticTacToe.mark_board(3);
+	ticTacToe.mark_board(9);
+	REQUIRE(ticTacToe.game_over() == true);
+}
+TEST_CASE("Test win diagonally from top left"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(1);
+	ticTacToe.mark_board(8);
+	ticTacToe.mark_board(5);
+	ticTacToe.mark_board(3);
+	ticTacToe.mark_board(9);
+	REQUIRE(ticTacToe.game_over() == true);
+
+}
+TEST_CASE("Test win diagonally from bottom left"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(7);
+	ticTacToe.mark_board(8);
+	ticTacToe.mark_board(5);
+	ticTacToe.mark_board(2);
+	ticTacToe.mark_board(3);
+	REQUIRE(ticTacToe.game_over() == true);
+
+}

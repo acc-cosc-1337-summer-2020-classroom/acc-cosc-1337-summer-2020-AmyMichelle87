@@ -3,23 +3,39 @@
 
 int main() 
 {
+	std::string choice; 
 	TicTacToe tic_tac_toe; 
 
-	std::string player; 
-	std::cout<<"Enter X or O: "; 
-	std::cin>>player; 
-
-	tic_tac_toe.start_game(player);
+	using std::cout; using std::cin; using std::string; 
 	do{
 
-		int position; 
-		std::cout<<"Enter position from 1 to 9: ";
-		std::cin>>position; 
-		tic_tac_toe.mark_board(position);
-		tic_tac_toe.display_board();
+		string player; 
+		cout<<"Enter X or O: "; 
+		cin>>player; 
+		
 
-	}while(tic_tac_toe.game_over() == false);
+		tic_tac_toe.start_game(player);
 
-	std::cout<<"Game Over!";
+			do{
+
+				int position; 
+				cout<<"Enter position from 1 to 9: ";
+				cin>>position; 
+
+				//validation for correct input
+				if(position < 0 || position > 9){
+					cout<<"Invalid postion. \n Please try again";
+				}
+				
+				tic_tac_toe.mark_board(position);
+				tic_tac_toe.display_board();
+
+			}while(tic_tac_toe.game_over() == false);
+
+				cout<<"\n\nWould you like to play agian (y/n)\n\n?";
+				cin>>choice;
+	}while(choice != "n" || choice != "N");
+
+	cout<<"\n\nGame Over!";
 	return 0;
 }
