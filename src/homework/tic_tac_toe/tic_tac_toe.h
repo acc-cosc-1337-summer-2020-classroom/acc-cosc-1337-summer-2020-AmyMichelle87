@@ -14,7 +14,7 @@ class TicTacToe{
         void start_game(std::string first_player);
         void display_board()const; 
         std::string get_player()const{ return player; }
-        std::string get_winner(){return winner; }
+        std::string get_winner(){ return winner; }
 
 
     private: 
@@ -27,6 +27,6 @@ class TicTacToe{
         void set_winner(); 
         std::string player; 
         std::vector<std::string> pegs{9, " "};
-        
+        std::string winner; 
 };
 #endif

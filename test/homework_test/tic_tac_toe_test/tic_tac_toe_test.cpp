@@ -5,7 +5,16 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
-
+TEST_CASE("Test first player set to X"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+	REQUIRE(ticTacToe.get_player() == "X");
+}
+TEST_CASE("Test first player set to O"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("O");
+	REQUIRE(ticTacToe.get_player() == "O");
+}
 TEST_CASE("Verify game ends when the board is full"){
 	TicTacToe tic_tac_toe; 
 	tic_tac_toe.start_game("X");
@@ -28,5 +37,19 @@ TEST_CASE("Verify game ends when the board is full"){
 	REQUIRE(tic_tac_toe.game_over() == false);
 	tic_tac_toe.mark_board(8);
 	REQUIRE(tic_tac_toe.game_over() == true);
+	REQUIRE(tic_tac_toe.get_winner() == "C");
 
 }
+
+TEST_CASE("Verify win by first column"){
+	TicTacToe ticTacToe; 
+	ticTacToe.start_game("X");
+
+	ticTacToe.mark_board(1);
+	ticTacToe.mark_board(2);
+	ticTacToe.mark_board(4);
+	ticTacToe.mark_board(8);
+	ticTacToe.mark_board(7);
+	REQUIRE(ticTacToe.game_over() == true);
+}
+
