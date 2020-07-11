@@ -22,8 +22,9 @@ std::string choice;
 				int position; 
 				cout<<"Enter position from 1 to 9: ";
 				cin>>position; 
-				while(!(position > 0 || position < 9)){
-					cout<<"Error-Invalid input.\n\nEnter position from 1 to 9: ";
+				while(position < 0 || position > 9){
+					cout<<"Error- Invalid postion. Please try again\n\n";
+					cout<<"Enter position from 1 to 9: ";
 					cin>>position;
 				}
 				tic_tac_toe.mark_board(position);
