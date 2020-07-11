@@ -36,7 +36,7 @@ std::string choice;
 				cin>>choice;
 	}while(choice == "y" || choice == "y");
 
-	cout<<"Thank you for playing!!\n\nGame Over!";
+	cout<<"\nGame Over!\n\nThank you for playing!!";
 	return 0; 
 
 }

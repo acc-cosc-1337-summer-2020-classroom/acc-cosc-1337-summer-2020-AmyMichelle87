@@ -39,11 +39,11 @@ bool TicTacToe::check_board_full()const{
 
 void TicTacToe::set_next_player(){
     if(player == "X"){
-        cout<<"Player O is the winner!!\n";
+        
         player = "O";
 
     }else{
-        cout<<"Player X is the winner!!\n";
+
         player = "X";
 
     }
@@ -136,7 +136,10 @@ bool TicTacToe::check_diagonal_win(){
 void TicTacToe::set_winner(){
     if(player == "X"){
         winner = "O";
+        cout<<"Player O is the winner!!\n";
     }else {
         winner = "X";
+        cout<<"Player X is the winner!!\n";
+
     }
 }
