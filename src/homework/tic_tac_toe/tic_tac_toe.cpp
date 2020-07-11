@@ -10,6 +10,7 @@ bool TicTacToe::game_over(){
         return true; 
     }else if(check_board_full() == true){
         winner = "C"; 
+        cout<<"Its a tie!!!";
         return true; 
     }
     return false;
@@ -24,15 +25,16 @@ bool TicTacToe::check_board_full()const{
     return true; 
 }
 
+//Mark board fills the position and has validation for user input. 
  void TicTacToe::mark_board(int position){
-     if(pegs[position-1] == " "){
-          pegs[position-1] = player; 
-          set_next_player();
-     }
+         if(pegs[position-1] == " "){
+             pegs[position-1] = player; 
+             set_next_player();
+         }  
      else{
-         cout<<"Position is already filled.  Please try again.\n\n";
-     }
-    
+         cout<<"Error\nPosition already filled. Please try again\n\n";
+        }
+     
  }
 
 void TicTacToe::set_next_player(){
