@@ -3,8 +3,16 @@
 
 
 double Engineer::get_pay(){
+
     double base_pay ; 
     double bonus; 
+    double grossPay = base_pay + bonus; 
 
-    return base_pay + bonus; 
+    cout<<"Enter Base Pay: "<<"\n";
+    cin>>base_pay; 
+    cout<<"Enter Bonus: "<<"\n";
+    cin>>bonus;
+    cout<<"Engineer gross pay for current pay period: "<<grossPay<<"\n";
+
+    return grossPay; 
 }
