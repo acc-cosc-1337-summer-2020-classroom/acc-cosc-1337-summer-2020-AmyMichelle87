@@ -1,10 +1,11 @@
 //cpp
 #include"engineer.h"
 
-
-Engineer(double base, double bonus){
-
+Engineer::Engineer(double base, double bonus){
+    basePay = base; 
+    bonusPay = bonus; 
 }
+
 double Engineer::get_pay(){
     
     double base_pay ; 

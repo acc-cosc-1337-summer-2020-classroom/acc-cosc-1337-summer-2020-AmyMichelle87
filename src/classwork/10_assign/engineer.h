@@ -8,6 +8,7 @@ class Engineer: public Employee{
     
 
     public: 
+        Engineer(double base, double bonus);
         double get_pay();
        
 

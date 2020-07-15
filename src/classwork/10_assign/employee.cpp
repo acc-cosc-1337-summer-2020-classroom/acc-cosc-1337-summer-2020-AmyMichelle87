@@ -3,7 +3,7 @@
 
 Employee::Employee(double base, double bonus){
     basePay = base; 
-    bonus = bonus; 
+    bonusPay = bonus; 
 }
 Employee::Employee(double hours, double rate, double commission){
     hours = hours; 
