@@ -8,11 +8,13 @@ using std::cout; using std::cin;
 
 class Employee{
 
-    public:                 
-        virtual double get_pay() = 0;
-    private: 
-        double grossPay = 0; 
 
+    public:    
+        Employee(double base, double bonus); 
+        Employee(double hours, double rate, double commission);       
+        virtual double get_pay() = 0;
+        double grossPay;
+        double basePay, bonus, hours, rate, commission; 
 };
 
 #endif

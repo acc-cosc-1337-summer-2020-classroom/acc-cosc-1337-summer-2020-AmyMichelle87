@@ -2,11 +2,14 @@
 #include"engineer.h"
 
 
-double Engineer::get_pay(){
+Engineer(double base, double bonus){
 
+}
+double Engineer::get_pay(){
+    
     double base_pay ; 
     double bonus; 
-    double grossPay = base_pay + bonus; 
+    grossPay = base_pay + bonus; 
 
     cout<<"Enter Base Pay: "<<"\n";
     cin>>base_pay; 
