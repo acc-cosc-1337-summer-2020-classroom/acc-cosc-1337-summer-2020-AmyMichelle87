@@ -8,8 +8,13 @@ class Engineer: public Employee{
     
 
     public: 
-        Engineer(double base, double bonus);
+        Engineer(double base, double bonus)
+        :Employee(base,bonus){ 
+            basePay = base; 
+            bonusPay = bonus; 
+        }        
         double get_pay();
+        double basePay, bonusPay;
        
 
 };

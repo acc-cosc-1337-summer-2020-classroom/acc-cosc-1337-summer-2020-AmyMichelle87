@@ -10,9 +10,11 @@ class Employee{
 
 
     public:        
+        Employee(double, double);
+        Employee(double, double, double);
         virtual double get_pay() = 0;
         double grossPay;
-        double basePay, bonusPay, hours, rate, commission; 
+        double basePay, bonusPay, hoursWorked, ratePaid, commissionPay; 
 };
 
 #endif

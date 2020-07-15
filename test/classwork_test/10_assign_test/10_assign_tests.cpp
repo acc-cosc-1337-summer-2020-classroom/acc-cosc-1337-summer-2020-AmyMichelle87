@@ -8,8 +8,11 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
+//this is correct syntax but the other classes/constructors need to be fixed. 
 TEST_CASE("Test class function Engineer::get_pay()"){
-	Employee* emp1 = new Engineer();
-	emp1 -> get_pay();
-	REQUIRE(get_pay() ==  1900);
+    Employee *engineer = new Engineer(1500, 400); 
+    
+    double result = engineer -> get_pay(); 
+    REQUIRE(result == 1900);
+
 }
