@@ -16,6 +16,9 @@ class Employee{
         virtual double get_pay() = 0;
         double grossPay, otPay, regPay;
         double basePay, bonusPay, hoursWorked, ratePaid, commissionPay; 
+        ~Employee(){}
+        
+        
 };
 
 #endif
