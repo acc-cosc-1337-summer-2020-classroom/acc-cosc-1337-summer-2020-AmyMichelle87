@@ -14,7 +14,7 @@ class Employee{
         Employee(double, double);
         Employee(double, double, double);
         virtual double get_pay() = 0;
-        double grossPay;
+        double grossPay, otPay, regPay;
         double basePay, bonusPay, hoursWorked, ratePaid, commissionPay; 
 };
 
