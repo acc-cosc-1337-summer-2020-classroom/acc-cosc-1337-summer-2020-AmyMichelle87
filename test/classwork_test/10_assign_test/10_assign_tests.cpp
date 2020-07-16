@@ -14,6 +14,8 @@ TEST_CASE("Test class function Engineer::get_pay()"){
     
     double result = engineer -> get_pay(); 
     REQUIRE(result == 1900);
+    delete engineer; 
+    engineer = nullptr; 
 
 }
 
@@ -22,6 +24,7 @@ TEST_CASE("Test class function SalesPerson::get_pay()"){
 
     double result = salesEmp -> get_pay();
     REQUIRE(result == 900);
-    
+    delete salesEmp; 
+    salesEmp = nullptr; 
 }
 

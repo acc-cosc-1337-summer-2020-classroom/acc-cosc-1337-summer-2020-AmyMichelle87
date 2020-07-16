@@ -17,6 +17,7 @@ class Employee{
         double grossPay, otPay, regPay;
         double basePay, bonusPay, hoursWorked, ratePaid, commissionPay; 
         virtual ~Employee(){}
+    
         
         
 };
