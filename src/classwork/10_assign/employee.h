@@ -9,7 +9,8 @@ using std::cout; using std::cin;
 class Employee{
 
 
-    public:        
+    public:      
+        Employee(){}  
         Employee(double, double);
         Employee(double, double, double);
         virtual double get_pay() = 0;

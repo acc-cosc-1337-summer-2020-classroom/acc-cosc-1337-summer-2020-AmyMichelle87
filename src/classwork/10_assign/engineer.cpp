@@ -6,7 +6,7 @@
 
 double Engineer::get_pay(){
     
-    grossPay = basePay + bonusPay; 
+    grossPay = basePay + bonusPay;
 
     return grossPay; 
 }

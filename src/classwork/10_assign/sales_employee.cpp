@@ -4,7 +4,14 @@
 double SalesEmployee::get_pay(){
    
     
-    grossPay = hoursWorked * ratePaid + commissionPay; 
+
+    if(hoursWorked > 40){
+        double OTpay = (hoursWorked - 40) * (ratePaid * 1.5); 
+        grossPay = (hoursWorked * ratePaid + commissionPay) + OTpay; 
+    }else {
+        grossPay = hoursWorked * ratePaid + commissionPay; 
+    }
+    
 
     return grossPay; 
 

@@ -16,3 +16,11 @@ TEST_CASE("Test class function Engineer::get_pay()"){
     REQUIRE(result == 1900);
 
 }
+
+TEST_CASE("Test class function SalesPerson::get_pay()"){
+    Employee *salesEmp = new SalesEmployee(40, 10, 500);
+
+    double result = salesEmp -> get_pay();
+    REQUIRE(result == 900);
+    
+}

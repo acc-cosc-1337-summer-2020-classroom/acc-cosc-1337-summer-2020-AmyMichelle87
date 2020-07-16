@@ -7,13 +7,15 @@
 class SalesEmployee: public Employee{
 
     public: 
-    SalesEmployee(double hours, double rate, double commisison)
-    :Employee(hours, rate, commission){
-        hoursWorked = hours; 
-        ratePaid = rate ;
-        commissionPay = commission; 
-    }
+        SalesEmployee() : Employee(){}
+        SalesEmployee(double hours, double rate, double commission)
+        :Employee(hours, rate, commission){
+            hoursWorked = hours; 
+            ratePaid = rate; 
+            commissionPay = commission;
+        }
         double get_pay();
+        double hoursWorked, ratePaid, commissionPay; 
 
 };
 
