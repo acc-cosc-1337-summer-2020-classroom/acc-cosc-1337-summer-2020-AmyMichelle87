@@ -25,10 +25,3 @@ TEST_CASE("Test class function SalesPerson::get_pay()"){
     
 }
 
-TEST_CASE("Test class function to calculate overtime"){
-    Employee *salesEmp = new SalesEmployee(55, 10, 500);
-
-    double result = salesEmp -> get_pay();
-    REQUIRE(result == 1125);
-    
-}
