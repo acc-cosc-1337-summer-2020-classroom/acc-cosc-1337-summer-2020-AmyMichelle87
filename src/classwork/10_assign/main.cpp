@@ -22,7 +22,6 @@ int main()
       Employee *engineer = new Engineer(base,bonus);
       cout<<"Engineer gross pay: $"<<engineer->get_pay()<<"\n";
       delete engineer; 
-      cout<<"Engineer gross pay: $"<<engineer->get_pay()<<"\n";
 
     } else if(choice ==2){
       cout<<"Enter hours: "<<"\n";
@@ -34,7 +33,6 @@ int main()
       Employee *salesEmp = new SalesEmployee(hours, rate, commission); 
       cout<<"Sales employee gross pay: $"<<salesEmp->get_pay()<<"\n"; 
       delete salesEmp; 
-      cout<<"Sales employee gross pay: $"<<salesEmp->get_pay()<<"\n"; 
 
     }else if(choice == 444){
       cout<<"GoodBye!\n\n";
