@@ -11,15 +11,9 @@ class Employee{
 
     public:      
         Employee(){}  
-        Employee(double, double);
-        Employee(double, double, double);
         virtual double get_pay() = 0;
-        double grossPay, otPay, regPay;
-        double basePay, bonusPay, hoursWorked, ratePaid, commissionPay; 
-        virtual ~Employee(){}
-    
-        
-        
+        virtual ~Employee(){}  
+     
 };
 
 #endif
