@@ -14,14 +14,33 @@ Vector::Vector(const Vector& v)
         element[i] = v.element[i]; 
     }
 }
+
+
 Vector::~Vector(){                                              //this releases the memory and fixed the memory leak. 
     std::cout<<"\nRelease memory\n";                            //This is the desctructor
     delete[] element; 
 }
-Vector& Vector::operator=(const Vector& v){
-    
-}
 
+
+Vector& Vector::operator=(const Vector& v){                       //copy assignment 
+    int* temp = new int[v.size]; 
+
+    for(size_t i = 0; i < v.size; i++){
+        temp[i] = v.element[i]; 
+    }
+        delete[] element; 
+        element = temp; 
+        size = v.size; 
+        return *this; 
+    }    
+
+
+Vector::Vector(Vector&& v)                                       //Move constructor
+:size{v.size}, element{v.element}
+{
+    v.size = 0; 
+    v.element = nullptr; 
+}
 //THIS IS NOT APART OF THE VECTOR CLASS!!! FREE FUNCTION 
 void use_stack_vector(){
     Vector v1(3);                 //dont need to call delete
